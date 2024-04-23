@@ -56,9 +56,9 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_str/ft_strrchr \
 				ft_str/ft_strtrim \
 				ft_str/ft_substr \
+				ft_to/ft_atoi \
 				ft_to/ft_tolower \
 				ft_to/ft_toupper \
-				ft_atoi \
 				ft_bzero \
 				ft_calloc \
 				ft_itoa \
