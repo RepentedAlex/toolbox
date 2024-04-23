@@ -6,12 +6,21 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 18:37:24 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:31 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:27:12 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Applies a function to each character of a string and creates a new string
+ * with the results.
+ *
+ * @param s The input string.
+ * @param f The function to apply to each character.
+ * @return The new string created by applying the function to each character,
+ *         or NULL if the input string is NULL or if memory allocation fails.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*new_str;

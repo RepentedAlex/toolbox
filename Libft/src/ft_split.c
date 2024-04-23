@@ -6,12 +6,19 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:09:26 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:57:17 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:33:37 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Counts the number of tokens in a string based on a given separator.
+ *
+ * @param str The string to count tokens from.
+ * @param sep The separator character.
+ * @return The number of tokens in the string.
+ */
 static size_t	ft_count_tokens(char const *str, char sep)
 {
 	int	token_count;
@@ -40,6 +47,24 @@ static size_t	ft_count_tokens(char const *str, char sep)
 	return (token_count);
 }
 
+/**
+ * @brief Copies a word from a string separated by a given character.
+ *
+ * This function copies a word from a string,
+ * where words are separated by a specified character.
+ * It starts copying from the first non-separator character and
+ * stops at the next separator character or the end of the string.
+ * The copied word is allocated dynamically using
+ * ft_calloc() and must be freed by the caller.
+ *
+ * @param str The string to copy the word from.
+ * @param sep The separator character.
+ * @param p   A pointer to a size_t variable to store the index
+ * of the next character after the copied word.
+ *
+ * @return A dynamically allocated string containing the copied word,
+ * or NULL if memory allocation fails.
+ */
 static char	*ft_copy_words(const char *str, char sep, size_t *p)
 {
 	size_t	i;
@@ -67,6 +92,15 @@ static char	*ft_copy_words(const char *str, char sep, size_t *p)
 	return (word);
 }
 
+/**
+ * @brief Frees the memory allocated for a dynamically allocated string array.
+ *
+ * This function takes a dynamically allocated string array as input and frees
+ * the memory allocated for each string in the array, as well as the memory
+ * allocated for the array itself.
+ *
+ * @param tab The string array to be freed.
+ */
 static void	ft_free_tab(char **tab)
 {
 	int	i;
@@ -80,6 +114,13 @@ static void	ft_free_tab(char **tab)
 	free(tab);
 }
 
+/**
+ * Splits a string into an array of tokens based on a delimiter character.
+ *
+ * @param s The string to split.
+ * @param c The delimiter character.
+ * @return An array of tokens, or NULL if memory allocation fails.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**tokens_array;

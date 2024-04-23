@@ -6,12 +6,23 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 01:29:18 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:55:14 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:30:12 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Copies a block of memory from a source address to a destination address,
+ * handling overlapping memory regions correctly.
+ *
+ * @param dest The pointer to the destination address
+ * where the memory will be copied to.
+ * @param src The pointer to the source address where
+ * the memory will be copied from.
+ * @param n The number of bytes to be copied.
+ * @return A pointer to the destination address.
+ */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
