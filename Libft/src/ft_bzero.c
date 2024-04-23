@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 23:44:49 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:50:25 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:57:00 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	size_t		filling = 12;
-	char		area[13];
-
-	ft_bzero(area, filling);
-	printf("%s\n", area);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:28:23 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:23 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:47 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		length++;
 	return (length);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	*src = "Kang-In Lee";
-	char	*dst = "qwertyuiopa";
-	size_t	size = 7;
-
-	size_t	result = ft_strlcpy(dst, src, size);
-	printf("Resultat ft: %zu\n", result);
-}
-*/

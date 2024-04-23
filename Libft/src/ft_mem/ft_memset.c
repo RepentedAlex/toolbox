@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 22:26:29 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:47:17 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:17 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int		byte = 65;
-	int		filling = 12;
-	char	area[13];
-
-	ft_memset(area, byte, filling);
-	printf("%s\n", area);
-}
-*/

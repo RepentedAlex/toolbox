@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:58:12 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:16 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:40 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(cat_str, s2, len_s1 + len_s2 + 1);
 	return (cat_str);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*s1 = "tripouille";
-	char	*s2 = "42";
-
-	char	*s3 = ft_strjoin(s1, s2);
-	printf("%s\n", s3);
-}
-*/

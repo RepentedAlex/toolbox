@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:09:26 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:50:32 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:57:17 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,20 +108,3 @@ char	**ft_split(char const *s, char c)
 	tokens_array[i] = NULL;
 	return (tokens_array);
 }
-
-/*
-#include <stdio.h>
-
-
-int	main(void)
-{
-	char	*original = "";
-	char	separator = ' ';
-	char	**tokens_array;
-
-	tokens_array = ft_split(original, separator);
-	for (int i = 0 ; tokens_array[i] != 0 ; i++)
-		printf("Tokens_array[%d] : %c\n", i, tokens_array[i]);
-	freeTab(tokens_array);
-}
-*/

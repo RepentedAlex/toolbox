@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 01:29:18 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:47:15 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:14 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
-	char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
-
-	ft_memmove(sResult + 1, sResult, 2);
-	printf("%s\n", sResult2);
-}
-*/

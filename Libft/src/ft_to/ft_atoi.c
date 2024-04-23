@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:30:55 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:50:08 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:56:47 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sign * output);
 }
-
-/*
-#include <stdio.h>
-
-int	main(int argc, char *argv[])
-{
-	if (argc != 2)
-		return (1);
-	else
-	{
-		int	result = ft_atoi(argv[1]);
-		printf("%d\n", result);
-	}
-}
-*/

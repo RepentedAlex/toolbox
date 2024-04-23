@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:17:34 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:35 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:56:27 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	*s1 = "abZ";
-	char	*s2 = "abc";
-	int		n = 7;
-
-	int	result = ft_strncmp(s1, s2, n);
-	printf("Resultat ft_: %d\n", result);
-	result = strncmp(s1, s2, n);
-	printf("Resultat originale: %d\n", result);
-}
-*/

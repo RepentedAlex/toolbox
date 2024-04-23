@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:11:52 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:47:05 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:04 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*test = "Lee Kang-In";
-	int		c = 'z';
-	size_t	n = 11;
-
-	char	*found = ft_memchr(test, c, n);
-	if (found != NULL)
-		printf("%s\n", found);
-	else
-		printf("Byte not found.\n");
-}
-*/

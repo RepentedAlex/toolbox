@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 03:06:02 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:05 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:33 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)&s[i]);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*test = "Kang-In Lee";
-	int		charset = 'N';
-
-	char	*found = ft_strchr(test, charset);
-	if (found != NULL)
-		printf("%s\n", found);
-	else
-		printf("Character not found.\n");
-}
-*/

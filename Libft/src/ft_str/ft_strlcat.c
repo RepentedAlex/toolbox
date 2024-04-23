@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:47:18 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:20 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:44 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = 0;
 	return (dst_len + src_len);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	*src = ft_strdup("Kang-In Lee");
-	char	*dst = ft_strdup("qwertyuiopa");
-	size_t	size = 7;
-
-	size_t	result = ft_strlcat(dst, src, size);
-	printf("Resultat ft_strlcat: %zu\n", result);
-}
-*/

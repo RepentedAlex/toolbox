@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:47:54 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:47:56 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:27 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-/*
-int	main(void)
-{
-	char	*string = "Kang-In Lee";
-	int		fd = 1;
-
-	ft_putstr_fd(string, fd);
-}
-*/

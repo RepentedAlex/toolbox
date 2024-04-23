@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:16:59 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:47:11 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:09 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	*original = "Kang-In Lee";
-	char	*destination = "ooooooooooo";
-	
-	char	*d_original = strdup(original);
-	char	*d_destination = strdup(destination);
-	destination = ft_memcpy(d_destination, d_original, 12);
-	printf("%s\n", d_destination);
-}
-*/

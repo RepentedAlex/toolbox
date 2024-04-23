@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:21:10 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:09 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:55:36 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,3 @@ char	*ft_strdup(const char *s)
 	duplicate[length - 1] = 0;
 	return (duplicate);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	test[] = "lorem ipsum dolor sit amet";
-	char	*duplicate;
-
-	duplicate = ft_strdup(test);
-	printf("%s\n", duplicate);
-	free(duplicate);
-	printf("%s\n", duplicate);
-}
-*/

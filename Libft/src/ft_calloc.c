@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:56:40 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:50:29 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:57:04 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(pointer, nmemb * size);
 	return (pointer);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*string;
-
-	string = calloc(4, sizeof(char));
-	string[0] = 'L';
-	string[1] = 'e';
-	string[2] = 'e';
-	string[3] = '\0';
-	printf("%s\n", string);
-}
-*/

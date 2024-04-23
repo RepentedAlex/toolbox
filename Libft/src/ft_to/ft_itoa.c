@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:39 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:50:12 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:56:50 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,15 +75,3 @@ char	*ft_itoa(int n)
 		ft_transcribe_nb(ascii, (long int)n, n_len);
 	return (ascii);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int		number = -2147483648;
-	
-	char	*str = ft_itoa(number);
-	printf("After itoa : %s\n", str);
-}
-*/

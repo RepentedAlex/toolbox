@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:29:49 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:47 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:56:38 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed_string, &s1[start], end - start + 2);
 	return (trimmed_string);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*test="xxxtripouille   ";
-	char	*charset=" x";
-
-	char	*resultat = ft_strtrim(test, charset);
-	printf("%s\n", resultat);
-	free(resultat);
-}
-*/

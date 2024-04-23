@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:54:05 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:45:52 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:54:27 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int c = 12;
-
-	int	result = ft_isalnum(c);
-	printf("%d\n", result);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:15:33 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 16:49:50 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:56:40 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(substr, (s + start), len + 1);
 	return (substr);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char			*original = "BONJOUR LES HARICOTS !";
-	unsigned int	start = 8;
-	size_t			len = 14;
-
-	char	*result = ft_substr(original, start, len);
-	printf("%s\n", result);
-}
-*/
