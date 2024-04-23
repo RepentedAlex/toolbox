@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:56:40 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:44:17 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:50:29 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

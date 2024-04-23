@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:15:33 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:43:47 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:49:50 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

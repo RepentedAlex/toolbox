@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:47:18 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:43:28 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:49:20 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

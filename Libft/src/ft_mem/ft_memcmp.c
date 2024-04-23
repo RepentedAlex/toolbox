@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:52:53 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:42:56 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:47:08 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

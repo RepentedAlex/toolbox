@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:39 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:44:22 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:50:12 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static int	ft_get_nb_len(long int n)
 {

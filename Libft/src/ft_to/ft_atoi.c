@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:30:55 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:44:10 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:50:08 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

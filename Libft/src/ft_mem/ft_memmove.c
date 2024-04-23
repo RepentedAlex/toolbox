@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 01:29:18 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:43:03 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:47:15 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

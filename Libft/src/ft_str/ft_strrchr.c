@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 03:19:08 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:43:42 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:49:44 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:07:30 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:42:29 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:46:09 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

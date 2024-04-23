@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:54:13 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:43:52 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:50:16 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

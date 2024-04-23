@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:08:24 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:43:40 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:49:40 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:09:26 by apetitco          #+#    #+#             */
-/*   Updated: 2024/02/29 22:44:24 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:50:32 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static size_t	ft_count_tokens(char const *str, char sep)
 {
