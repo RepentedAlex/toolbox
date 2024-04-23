@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:51:12 by apetitco          #+#    #+#             */
-/*   Updated: 2024/03/01 00:51:00 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 21:27:38 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "../Libft/include/libft.h"
+# include "libft.h"
 # include <stdarg.h>
 # include <stdint.h>
 # include <unistd.h>

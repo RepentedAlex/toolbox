@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:25:49 by apetitco          #+#    #+#             */
-/*   Updated: 2024/03/01 00:51:22 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 21:24:34 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_print_string(char *str)
 {

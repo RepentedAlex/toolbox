@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:33:16 by apetitco          #+#    #+#             */
-/*   Updated: 2024/03/01 00:51:42 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 21:24:45 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_print_num(int n)
 {

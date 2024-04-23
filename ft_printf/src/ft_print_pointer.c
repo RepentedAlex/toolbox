@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:26:59 by apetitco          #+#    #+#             */
-/*   Updated: 2024/03/01 00:51:19 by apetitco         ###   ########.fr       */
+/*   Updated: 2024/04/23 21:24:30 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_pointer_len(uintptr_t nb)
 {

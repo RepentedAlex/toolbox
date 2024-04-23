@@ -20,7 +20,7 @@ NAME		= libftprintf.a
 CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra
 INCLUDE		= include
-LIBFT		= Libft
+LIBFT		= ../Libft
 SRC_DIR		= src/
 OBJ_DIR		= obj/
 RM			= rm -f
@@ -55,7 +55,7 @@ $(NAME):	$(OBJ)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
 			@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
-			@$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+			@$(CC) $(CFLAGS) -I $(INCLUDE) -I $(LIBFT)/$(INCLUDE) -c $< -o $@
 
 $(OBJF):
 			@mkdir -p $(OBJ_DIR)
