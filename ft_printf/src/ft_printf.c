@@ -6,17 +6,30 @@
 /*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:52 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 21:24:41 by alessandrop      ###   ########.fr       */
+/*   Updated: 2024/04/23 21:49:40 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * Prints a single character to the standard output.
+ *
+ * @param c The character to be printed.
+ * @return The number of characters written, or -1 if an error occurred.
+ */
 int	ft_print_char(int c)
 {
 	return (write(1, &c, 1));
 }
 
+/**
+ * Evaluates the format specifier and prints the corresponding value.
+ * 
+ * @param args The variable argument list.
+ * @param format The format specifier character.
+ * @return The length of the printed output.
+ */
 int	ft_eval_format(va_list args, const char format)
 {
 	int	print_len;
@@ -39,6 +52,13 @@ int	ft_eval_format(va_list args, const char format)
 	return (print_len);
 }
 
+/**
+ * Prints formatted output to the standard output stream.
+ *
+ * @param format The format string specifying the output format.
+ * @param ...    Additional arguments to be formatted according to the format string.
+ * @return       The total number of characters written.
+ */
 int	ft_printf(const char *format, ...)
 {
 	int		i;
@@ -64,12 +84,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (ret);
 }
-
-/*
-int	main(void)
-{
-	int c = -1;
-	ft_printf("", c);
-	printf("", c);
-}
-*/

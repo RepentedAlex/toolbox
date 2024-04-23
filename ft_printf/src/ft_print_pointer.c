@@ -6,12 +6,18 @@
 /*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:26:59 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 21:24:30 by alessandrop      ###   ########.fr       */
+/*   Updated: 2024/04/23 21:46:14 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * Calculates the length of a pointer value in hexadecimal format.
+ *
+ * @param nb The pointer value to calculate the length for.
+ * @return The length of the pointer value in hexadecimal format.
+ */
 int	ft_pointer_len(uintptr_t nb)
 {
 	int	len;
@@ -25,6 +31,11 @@ int	ft_pointer_len(uintptr_t nb)
 	return (len);
 }
 
+/**
+ * Prints the hexadecimal representation of a pointer.
+ * 
+ * @param nb The pointer value to be printed.
+ */
 void	ft_put_pointer(uintptr_t nb)
 {
 	if (nb >= 16)
@@ -41,6 +52,14 @@ void	ft_put_pointer(uintptr_t nb)
 	}
 }
 
+/**
+ * Prints the value of a pointer in hexadecimal format.
+ * If the pointer is NULL, it prints "(nil)".
+ * Returns the total number of characters printed.
+ *
+ * @param ptr The pointer value to be printed.
+ * @return The total number of characters printed.
+ */
 int	ft_print_pointer(unsigned long long ptr)
 {
 	int	print_len;

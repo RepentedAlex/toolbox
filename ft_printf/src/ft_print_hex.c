@@ -6,12 +6,18 @@
 /*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:32:06 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 21:24:26 by alessandrop      ###   ########.fr       */
+/*   Updated: 2024/04/23 21:44:38 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * Calculates the length of a hexadecimal number.
+ *
+ * @param nb The unsigned integer to calculate the length of.
+ * @return The length of the hexadecimal number.
+ */
 int	ft_hex_len(unsigned int nb)
 {
 	int	len;
@@ -25,6 +31,16 @@ int	ft_hex_len(unsigned int nb)
 	return (len);
 }
 
+/**
+ * @brief Prints the hexadecimal representation of a given number.
+ * 
+ * This function recursively converts the given number into its hexadecimal representation
+ * and prints it to the standard output. The format parameter determines whether the
+ * hexadecimal letters should be lowercase ('x') or uppercase ('X').
+ * 
+ * @param nb The number to be converted and printed.
+ * @param format The format of the hexadecimal letters ('x' for lowercase, 'X' for uppercase).
+ */
 void	ft_put_hex(unsigned int nb, const char format)
 {
 	if (nb >= 16)
@@ -46,6 +62,13 @@ void	ft_put_hex(unsigned int nb, const char format)
 	}
 }
 
+/**
+ * Prints the hexadecimal representation of a given number.
+ *
+ * @param nb The number to be printed in hexadecimal format.
+ * @param format The format specifier for the hexadecimal representation.
+ * @return The length of the hexadecimal representation.
+ */
 int	ft_print_hex(unsigned int nb, const char format)
 {
 	if (nb == 0)

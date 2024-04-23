@@ -6,12 +6,18 @@
 /*   By: alessandropetitcollin <alessandropetitc    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:29:30 by apetitco          #+#    #+#             */
-/*   Updated: 2024/04/23 21:24:37 by alessandrop      ###   ########.fr       */
+/*   Updated: 2024/04/23 21:48:21 by alessandrop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * Calculates the number of digits in an unsigned integer.
+ *
+ * @param nb The unsigned integer for which to calculate the number of digits.
+ * @return The number of digits in the unsigned integer.
+ */
 int	ft_nb_len(unsigned int nb)
 {
 	int	len;
@@ -25,6 +31,13 @@ int	ft_nb_len(unsigned int nb)
 	return (len);
 }
 
+/**
+ * Converts an unsigned integer to a string representation.
+ *
+ * @param n The unsigned integer to be converted.
+ * @return A dynamically allocated string representing the unsigned integer.
+ *         The caller is responsible for freeing the memory.
+ */
 char	*ft_uitoa(unsigned int n)
 {
 	char	*nb;
@@ -44,6 +57,12 @@ char	*ft_uitoa(unsigned int n)
 	return (nb);
 }
 
+/**
+ * Prints an unsigned integer to the standard output.
+ *
+ * @param n The unsigned integer to be printed.
+ * @return The number of characters printed.
+ */
 int	ft_print_unsigned_num(unsigned int n)
 {
 	int		print_len;
