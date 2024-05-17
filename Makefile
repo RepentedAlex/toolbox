@@ -67,18 +67,21 @@ BONUS_OBJ	=	$(addprefix $(BUILD_DIR), $(addsuffix .o, $(BONUS_FILES)))
 all: $(NAME)
 
 $(NAME): $(OBJF) $(OBJ)
-	@
+	@echo "$(CYAN)=== COMPILING $(NAME) ===$(DEF_COLOR)"
+	@$(CC) $(CFLAGS) -I$(INCLUDE) $(OBJ) -o $(NAME)
+	@echo "$(GREEN)!!! $(NAME) COMPILED !!!$(DEF_COLOR)"
 
 $(BUILD_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
-	@echo "$(YELLOW)Compiling $<$(DEF_COLOR)"
+	@echo "$(CYAN)=== COMPILING $< ===$(DEF_COLOR)"
 	@$(CC) $(CFLAGS) -I$(INCLUDE) -c $< -o $@
 
 $(OBJF):
+	@echo "$(CYAN)=== CREATING BUILD DIRECTORY ===$(DEF_COLOR)"
 	@mkdir -p $(OBJ_DIR)
 	@mkdir -p $(addprefix $(BUILD_DIR), $(dir $(SRC_FILES)))
 	@mkdir -p $(addprefix $(BUILD_DIR), $(dir $(BONUS_FILES)))
 	@touch $(OBJF)
-	@echo "$(GREEN)Object directory created!$(DEF_COLOR)"
+	@echo "$(GREEN)!!! Build directory created !!!$(DEF_COLOR)"
 
 bonus: all $(OBJ) $(BONUS_OBJ)
 	@
@@ -86,11 +89,11 @@ bonus: all $(OBJ) $(BONUS_OBJ)
 clean:
 	@$(RM) $(OBJ) $(BONUS_OBJ) $(OBJF)
 	@$(RM) -r $(BUILD_DIR)
-	@echo "$(RED)Objects removed!$(DEF_COLOR)"
+	@echo "$(MAGENTA)!!! BUILD FILES REMOVED !!!$(DEF_COLOR)"
 
 fclean: clean 
 	@$(RM) $(NAME)
-	@echo "$(RED)$(NAME) removed!$(DEF_COLOR)"
+	@echo "$(MAGENTA)!!! $(NAME) REMOVED !!!$(DEF_COLOR)"
 
 re: fclean all
 	
