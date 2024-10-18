@@ -1,1 +1,8 @@
-.idea/
+/.cache_exists
+coverage
+toolbox.a
+build
+Libft/.cache_exists
+Libft/libft.a
+Libft/build
+.idea
