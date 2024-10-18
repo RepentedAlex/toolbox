@@ -1,28 +1,41 @@
-############
-## COLORS ##
-############
-
-DEF_COLOR = \033[0;39m
-GRAY = \033[0;90m
-RED = \033[0;91m
-GREEN = \033[0;92m
-YELLOW = \033[0;93m
-BLUE = \033[0;94m
-MAGENTA = \033[0;95m
-CYAN = \033[0;96m
-WHITE = \033[0;97m
-
-###############
-## VARIABLES ##
-###############
+#     _____        _____        _____        _____         _____
+#  __|_    |__  __|_    |__  __|___  |__  __|___  |__  ___|__   |__
+# |    |      ||    |      ||      >    ||   ___|    ||_    _|     |
+# |    |_     ||    |      ||     <     ||   ___|    | |    |      |
+# |______|  __||____|    __||______>  __||___|     __| |____|    __|
+#    |_____|      |_____|      |_____|      |_____|       |_____|
 
 NAME	= libft.a
+
+######################
+## COMPILER & FLAGS ##
+######################
+
 CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror
-INCLUDE	= include
+FLAGS	= -Wall -Wextra -Werror
+DEBUG	= -g3
+FLAGS	+= $(DEBUG)
+DFLAGS	= -MMD -MP
+FLAGS	+= $(DFLAGS)
+FFLAGS	= -fsanitize=address
+#FLAGS	+= $(FFLAGS)
+IFLAGS	= -I../include
+FLAGS	+= $(IFLAGS)
+
+#################
+## DIRECTORIES ##
+#################
+
+BUI_DIR	= build/
+INC_DIR	= ../include/
 SRC_DIR	= src/
-OBJ_DIR	= obj/
-RM		= rm -f
+TES_DIR	= tests/
+
+##############
+## COMMANDS ##
+##############
+
+RM		= rm -rf
 AR		= ar rcs
 
 #############
@@ -34,6 +47,15 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_is/ft_isascii \
 				ft_is/ft_isdigit \
 				ft_is/ft_isprint \
+				ft_lst/ft_lstadd_back_bonus \
+				ft_lst/ft_lstadd_front_bonus \
+				ft_lst/ft_lstclear_bonus \
+				ft_lst/ft_lstdelone_bonus \
+				ft_lst/ft_lstiter_bonus \
+				ft_lst/ft_lstlast_bonus \
+				ft_lst/ft_lstmap_bonus \
+				ft_lst/ft_lstnew_bonus \
+				ft_lst/ft_lstsize_bonus \
 				ft_mem/ft_memchr \
 				ft_mem/ft_memcmp \
 				ft_mem/ft_memcpy \
@@ -65,26 +87,23 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_split
 
 SRC		= $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
-OBJ		= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
+OBJ		= $(addprefix $(BUI_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 OBJF	= .cache_exists
 
-###########
-## BONUS ##
-###########
+############
+## COLORS ##
+############
 
-BONUS_FILES =	ft_lst/ft_lstadd_back_bonus \
-				ft_lst/ft_lstadd_front_bonus \
-				ft_lst/ft_lstclear_bonus \
-				ft_lst/ft_lstdelone_bonus \
-				ft_lst/ft_lstiter_bonus \
-				ft_lst/ft_lstlast_bonus \
-				ft_lst/ft_lstmap_bonus \
-				ft_lst/ft_lstnew_bonus \
-				ft_lst/ft_lstsize_bonus
-
-BONUS_SRC	= $(addprefix $(SRC_DIR), $(addsuffix .c, $(BONUS_FILES)))
-BONUS_OBJ	= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(BONUS_FILES)))
+DEF_COLOR = \033[0;39m
+GRAY = \033[0;90m
+RED = \033[0;91m
+GREEN = \033[0;92m
+YELLOW = \033[0;93m
+BLUE = \033[0;94m
+MAGENTA = \033[0;95m
+CYAN = \033[0;96m
+WHITE = \033[0;97m
 
 #############
 ## RECIPES ##
@@ -92,34 +111,25 @@ BONUS_OBJ	= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(BONUS_FILES)))
 
 all: $(NAME)
 
-$(NAME): $(OBJF) $(OBJ)
+$(NAME): $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
-	@echo "$(GREEN)$(NAME) compiled!$(DEF_COLOR)"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
-	@echo "$(YELLOW)Compiling $<$(DEF_COLOR)"
-	@$(CC) $(CFLAGS) -I$(INCLUDE) -c $< -o $@
+$(BUI_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
+	@mkdir -p $(dir $@)
+	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJF):
-	@mkdir -p $(OBJ_DIR)
-	@mkdir -p $(addprefix $(OBJ_DIR), $(dir $(SRC_FILES)))
-	@mkdir -p $(addprefix $(OBJ_DIR), $(dir $(BONUS_FILES)))
 	@touch $(OBJF)
-	@echo "$(GREEN)Object directory created!$(DEF_COLOR)"
-
-bonus: all $(OBJ) $(BONUS_OBJ)
-	@$(AR) $(NAME) $(BONUS_OBJ)
-	@echo "$(GREEN)$(NAME) compiled with bonus!$(DEF_COLOR)"
 
 clean: 
-	@$(RM) $(OBJ) $(BONUS_OBJ) $(OBJF)
-	@$(RM) -r $(OBJ_DIR)
-	@echo "$(RED)Objects removed!$(DEF_COLOR)"
+	@$(RM) $(OBJ) $(OBJF)
+	@$(RM) $(BUI_DIR)
 
 fclean: clean 
 	@$(RM) $(NAME)
-	@echo "$(RED)$(NAME) removed!$(DEF_COLOR)"
 
 re: fclean all
+
+-include $(OBJ:.o=.d)
 	
 .PHONY: all bonus clean fclean re

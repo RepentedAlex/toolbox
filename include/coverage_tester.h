@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   coverage_tester.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apetitco <apetitco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 15:10:45 by apetitco          #+#    #+#             */
-/*   Updated: 2024/03/21 13:14:02 by apetitco         ###   ########.fr       */
+/*   Created: 2024/10/18 14:57:37 by apetitco          #+#    #+#             */
+/*   Updated: 2024/10/18 14:57:41 by apetitco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef COVERAGE_TESTER_H
+# define COVERAGE_TESTER_H
 
+// == == == INCLUDES == == ==
+#include <stdio.h>
 # include <stdlib.h>
-# include <unistd.h>
+# include <string.h>
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 3
-# endif
-
-void	ft_bzero(void *s, size_t n);
-char	*ft_calloc(size_t nmemb, size_t size);
-char	*get_next_line(int fd);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlen(const char *s);
+// == == == MODULES TESTERS == == ==
+int	test_ft_strlen(void);
 
 #endif

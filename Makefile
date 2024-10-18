@@ -1,41 +1,46 @@
+###########  ###########  ###########  ###          ##########    ###########  ###     ###
+###########  ###########  ###########  ###          ###    ###    ###########   ###   ###
+    ###      ###     ###  ###     ###  ###          ##########    ###     ###    #######
+    ###      ###     ###  ###     ###  ###          ############  ###     ###    #######
+    ###      ###########  ###########  ###########  ###      ###  ###########   ###   ###
+    ###      ###########  ###########  ###########  ############  ###########  ###     ###
+
 ########################
 ## COMPILER AND FLAGS ##
 ########################
 
+AR			=	ar rcsT
+RM			=	rm -rf
 CC			=	gcc
-STD			=	-std=c99
-WFLAGS		=	-Wall -Wextra -Wno-unused-parameter \
-                -Werror \
-                -Wno-unused-variable -Wno-unused-function \
-                -Wno-unused-value \
-                -Wno-unused-label -Wno-unused-local-typedefs \
-                -Wno-unused-const-variable -Wno-unused-macros
-FFLAGS		=	-fsanitize=address \
-				-fno-omit-frame-pointer \
-            	-fsanitize=undefined \
-            	-fsanitize=leak \
-            	-fsanitize=pointer-subtract \
-            	-fsanitize=pointer-compare \
-            	-fsanitize=pointer-overflow \
-CFLAGS		=	$(WFLAGS) $(STD) -MMD -MP -Werror -O3
+FLAGS		=	-Wall -Wextra -Werror
+DEBUG		= -g3
+FLAGS		+= $(DEBUG)
+DFLAGS		= -MMD -MP
+FLAGS		+= $(DFLAGS)
+FFLAGS		=	-fsanitize=address
+#FLAGS		+= $(FFLAGS)
+IFLAGS		= -Iinclude
+FLAGS		+= $(IFLAGS)
+
 
 #################
 ## DIRECTORIES ##
 #################
 
-SRC_DIR		=	src
-BUILD_DIR	=	build
-INCLUDE		=	include
+BUI_DIR		=	build/
+INC_DIR		=	include/
+SRC_DIR		=	src/
+TES_DIR		=	tests/
+
+LIBFT		=	Libft/
 
 ###########
 ## FILES ##
 ###########
 
-NAME		=	$(notdir $(shell pwd))
-SRC_FILES	=	
-SRC			=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
-OBJ			=	$(addprefix $(BUILD_DIR), $(addsuffix .o, $(SRC_FILES)))
-OBJF		=	.cache_exists
+NAME		=	toolbox.a
+
+LIBFT_A		= $(LIBFT)libft.a
 
 ############
 ## COLORS ##
@@ -49,54 +54,66 @@ MAGENTA		=	\033[1;35m
 CYAN		=	\033[1;36m
 RESET		=	\033[0m
 
-#################
-## BONUS FILES ##
-#################
+###################
+## COVERAGE TEST ##
+###################
 
-BONUS_FILES	=	
+TEST_NAME	=	coverage
 
-BONUS_SRC	=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(BONUS_FILES)))
-BONUS_OBJ	=	$(addprefix $(BUILD_DIR), $(addsuffix .o, $(BONUS_FILES)))
+TEST_FIL	=	main \
+				ft_str/test_ft_strlen
+
+TEST		= $(addprefix $(TES_DIR)$(SRC_DIR), $(addsuffix .c, $(TEST_FIL)))
+TEST_OBJ	= $(addprefix $(TES_DIR)$(BUI_DIR), $(addsuffix .o, $(TEST_FIL)))
+
+OBJF		= .cache_exists
 
 #############
 ## RECIPES ##
 #############
 
-# Default target
+# Protection towards relinking
 all: $(NAME)
 
-# Link
-$(NAME): $(OBJF) $(OBJ)
-	@echo -e "$(BLUE)Linking $@$(RESET)"
-	@$(CC) $(CFLAGS) -I$(INCLUDE) $(OBJ) -o $(NAME)
-	@echo -e "$(GREEN)Build successful!$(RESET)"
+#Merge all static libraries into one
+$(NAME): $(LIBFT_A)
+	echo "Combinig libraries into $(NAME)..."
+	$(AR) $(NAME) $(LIBFT_A)
+	echo "$(NAME) Created"
 
-# Compile
-$(BUILD_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
-	@echo -e "$(YELLOW)Compiling $<$(RESET)"
-	@$(CC) $(CFLAGS) -I$(INCLUDE) -c $< -o $@
-
-# Create directories
-$(OBJF):
-	@echo "$(CYAN)=== CREATING BUILD DIRECTORY ===$(DEF_COLOR)"
-	@mkdir -p $(OBJ_DIR)
-	@mkdir -p $(addprefix $(BUILD_DIR), $(dir $(SRC_FILES)))
-	@mkdir -p $(addprefix $(BUILD_DIR), $(dir $(BONUS_FILES)))
-	@touch $(OBJF)
-	@echo "$(GREEN)!!! Build directory created !!!$(DEF_COLOR)"
-
-bonus: all $(OBJ) $(BONUS_OBJ)
-	@
+$(LIBFT_A):
+	echo "Compiling Libft.a"
+	$(MAKE) -C $(LIBFT)
 
 clean:
-	@$(RM) $(OBJ) $(BONUS_OBJ) $(OBJF)
-	@$(RM) -r $(BUILD_DIR)
-	@echo -e "$(RED)Cleaning build files$(RESET)"
+	echo "Cleaning individual libraries..."
+	$(MAKE) clean -C $(LIBFT)
+	$(RM) $(TES_DIR)$(BUI_DIR) $(OBJF)
 
 fclean: clean 
-	@$(RM) $(NAME)
-	@echo -e "$(RED)Cleaning binary$(RESET)"
+	echo "Removing all libraries..."
+	$(MAKE) fclean -C $(LIBFT)
+	$(RM) $(NAME)
+	$(RM) $(TEST_NAME)
 
 re: fclean all
-	
-.PHONY: all bonus clean fclean re
+
+##################
+## TEST TARGETS ##
+##################
+
+test : $(NAME) $(TEST_NAME)
+
+$(TEST_NAME): $(TEST_OBJ)
+	$(CC) $(FLAGS) $(TEST_OBJ) $(NAME) -o $(TEST_NAME)
+
+$(TES_DIR)$(BUI_DIR)%.o: $(TES_DIR)$(SRC_DIR)%.c | $(OBJF)
+	mkdir -p $(dir $@)
+	$(CC) $(FLAGS) -c $< -o $@
+
+$(OBJF):
+	touch $(OBJF)
+
+-include: $(OBJ:.o=.d)
+
+.PHONY: all clean fclean re
