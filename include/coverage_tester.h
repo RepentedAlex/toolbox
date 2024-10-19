@@ -18,7 +18,11 @@
 # include <stdlib.h>
 # include <string.h>
 
+// == == == UTILITARIES == == ==
+int	run_tests(int (*f)(void), char *test);
+
 // == == == MODULES TESTERS == == ==
+int	test_ft_isalnum(void);
 int	test_ft_strlen(void);
 
 #endif

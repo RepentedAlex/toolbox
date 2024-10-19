@@ -12,6 +12,18 @@
 
 #include "../../include/coverage_tester.h"
 
+int	run_tests(int (*f)(void), char *test)
+{
+	int	ret;
+
+	ret = f();
+	if (!ret)
+		printf("%s: \e[0;32mOK\e[0;0m\n", test);
+	else
+		printf("%s: \e[0;31mKO\e[0;0m\n", test);
+	return (ret);
+}
+
 /// @brief Fonction du testeur
 /// @return
 int	coverage_test(void)
@@ -26,6 +38,11 @@ int	coverage_test(void)
 		printf("ft_strlen(): \e[0;31mKO\e[0;0m\n");
 	else
 		printf("ft_strlen(): \e[0;32mOK\e[0;0m\n");
+	ret += test_ft_isalnum();
+	if (last_ret != ret)
+		printf("ft_isalnum(): \e[0;31mKO\e[0;0m\n");
+	else
+		printf("ft_isalnum(): \e[0;32mOK\e[0;0m\n");
 	return (ret);
 }
 

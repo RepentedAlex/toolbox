@@ -106,18 +106,6 @@ int	test_non_printable_string(void)
 	return (0);
 }
 
-int	run_tests(int (*f)(void), char *test)
-{
-	int	ret;
-
-	ret = f();
-	if (!ret)
-		printf("%s: \e[0;32mOK\e[0;0m\n", test);
-	else
-		printf("%s: \e[0;31mKO\e[0;0m\n", test);
-	return (ret);
-}
-
 int	test_ft_strlen(void)
 {
 	int	ret;
