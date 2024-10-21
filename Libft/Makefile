@@ -46,6 +46,7 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_is/ft_isalpha \
 				ft_is/ft_isascii \
 				ft_is/ft_isdigit \
+				ft_is/ft_isifs \
 				ft_is/ft_isprint \
 				ft_lst/ft_lstadd_back_bonus \
 				ft_lst/ft_lstadd_front_bonus \
@@ -65,8 +66,10 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_put/ft_putendl_fd \
 				ft_put/ft_putnbr_fd \
 				ft_put/ft_putstr_fd \
+				ft_str/ft_str_append \
 				ft_str/ft_strchr \
 				ft_str/ft_strcmp \
+				ft_str/ft_strcpy \
 				ft_str/ft_strdup \
 				ft_str/ft_striteri \
 				ft_str/ft_strjoin \
@@ -74,6 +77,7 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_str/ft_strlcpy \
 				ft_str/ft_strlen \
 				ft_str/ft_strmapi \
+				ft_str/ft_strncat \
 				ft_str/ft_strncmp \
 				ft_str/ft_strnstr \
 				ft_str/ft_strrchr \
