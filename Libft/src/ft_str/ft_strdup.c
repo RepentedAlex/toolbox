@@ -28,6 +28,8 @@ char	*ft_strdup(const char *s)
 	char	*duplicate;
 	int		length;
 
+	if (!s)
+		return (NULL);
 	length = (ft_strlen((char *)s) + 1);
 	duplicate = (char *)ft_calloc(length, sizeof(char));
 	if (!duplicate)
