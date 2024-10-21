@@ -1,6 +1,6 @@
 /.cache_exists
 coverage
-toolbox.a
+libtoolbox.a
 build
 Libft/.cache_exists
 Libft/libft.a
