@@ -111,7 +111,7 @@ int	test_ft_strlen(void)
 	int	ret;
 
 	ret = 0;
-	printf("Testing ft_strlen():\n");
+	printf("\nTesting ft_strlen():\n");
 
 	ret += run_tests(test_typical_string, "typical string");
 	ret += run_tests(test_empty_string, "empty string");

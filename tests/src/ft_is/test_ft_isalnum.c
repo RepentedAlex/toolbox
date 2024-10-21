@@ -104,7 +104,7 @@ int	test_ft_isalnum(void)
 	int	ret;
 
 	ret = 0;
-	printf("Testing ft_isalnum():\n");
+	printf("\nTesting ft_isalnum():\n");
 
 	ret += run_tests(test_digits, "digits");
 	ret += run_tests(test_lowercase_letters, "lowercase letters");
