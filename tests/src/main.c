@@ -33,6 +33,11 @@ int	coverage_test(void)
 
 	ret = 0;
 	last_ret = 0;
+	ret += test_ft_strdup();
+	if (last_ret != ret)
+		printf("ft_strdup(): \e[0;31mKO\e[0;0m\n");
+	else
+		printf("ft_strdup(): \e[0;32mOK\e[0;0m\n");
 	ret += test_ft_strlen();
 	if (last_ret != ret)
 		printf("ft_strlen(): \e[0;31mKO\e[0;0m\n");

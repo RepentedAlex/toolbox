@@ -23,6 +23,7 @@ int	run_tests(int (*f)(void), char *test);
 
 // == == == MODULES TESTERS == == ==
 int	test_ft_isalnum(void);
+int	test_ft_strdup(void);
 int	test_ft_strlen(void);
 
 #endif

@@ -61,6 +61,8 @@ RESET		=	\033[0m
 TEST_NAME	=	coverage
 
 TEST_FIL	=	main \
+				ft_is/test_ft_isalnum \
+				ft_str/test_ft_strdup \
 				ft_str/test_ft_strlen
 
 TEST		= $(addprefix $(TES_DIR)$(SRC_DIR), $(addsuffix .c, $(TEST_FIL)))
