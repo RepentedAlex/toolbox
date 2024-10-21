@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#define IFS " \t\n"
+
 bool	ft_is_ifs(const char c)
 {
 	int	i;
