@@ -38,7 +38,7 @@ LIBFT		=	Libft/
 ## FILES ##
 ###########
 
-NAME		=	toolbox.a
+NAME		=	libtoolbox.a
 
 LIBFT_A		= $(LIBFT)libft.a
 
