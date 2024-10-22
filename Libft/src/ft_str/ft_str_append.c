@@ -12,6 +12,10 @@
 
 #include "../../../include/libft.h"
 
+/// @brief Takes two string and append the s2 to the s1 in a freeable string.
+/// @param s1 The string which we will append s2 to.
+/// @param s2 The string that will be appended to s1.
+/// @return A freeable string if successfull, NULL otherwise
 char	*ft_str_append(const char *s1, const char *s2)
 {
 	char	*res;
