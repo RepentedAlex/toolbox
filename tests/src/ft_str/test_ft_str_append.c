@@ -14,7 +14,7 @@
 #include "../../../include/libft.h"
 #include <string.h>
 
-int	test_normal(void)
+static int	test_normal(void)
 {
 	char	*res;
 
@@ -24,7 +24,7 @@ int	test_normal(void)
 	return (free(res), 0);
 }
 
-int	test_empty_s2(void)
+static int	test_empty_s2(void)
 {
 	char	*res;
 
@@ -34,7 +34,7 @@ int	test_empty_s2(void)
 	return (free(res), 0);
 }
 
-int	test_empty_s1(void)
+static int	test_empty_s1(void)
 {
 	char	*res;
 
@@ -44,7 +44,7 @@ int	test_empty_s1(void)
 	return (free(res), 0);
 }
 
-int	test_empty_both(void)
+static int	test_empty_both(void)
 {
 	char	*res;
 
@@ -54,7 +54,7 @@ int	test_empty_both(void)
 	return (free(res), 0);
 }
 
-int	test_s2_null(void)
+static int	test_s2_null(void)
 {
 	char	*res;
 
@@ -64,7 +64,7 @@ int	test_s2_null(void)
 	return (0);
 }
 
-int	test_s1_null(void)
+static int	test_s1_null(void)
 {
 	char	*res;
 
@@ -74,7 +74,7 @@ int	test_s1_null(void)
 	return (0);
 }
 
-int	test_special_char(void)
+static int	test_special_char(void)
 {
 	char	*res;
 
@@ -96,6 +96,7 @@ int	test_ft_str_append(void)
 	ret += run_tests(test_empty_both, "Both string empty");
 	ret += run_tests(test_s2_null, "s2 == NULL");
 	ret += run_tests(test_s1_null, "s1 == NULL");
+	ret += run_tests(test_special_char, "Special chararcter");
 	if (ret)
 		return (1);
 	return (0);

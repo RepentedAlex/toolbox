@@ -67,6 +67,7 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_put/ft_putnbr_fd \
 				ft_put/ft_putstr_fd \
 				ft_str/ft_str_append \
+				ft_str/ft_strcat \
 				ft_str/ft_strchr \
 				ft_str/ft_strcmp \
 				ft_str/ft_strcpy \
