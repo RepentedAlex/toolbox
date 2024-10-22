@@ -33,11 +33,17 @@ int	coverage_test(void)
 
 	ret = 0;
 	last_ret = 0;
-	ret += test_ft_str_append();
+	ret += test_ft_strapp();
 	if (last_ret != ret)
-		printf("ft_str_append(): \e[0;31mKO\e[0;0m\n");
+		printf("ft_strapp(): \e[0;31mKO\e[0;0m\n");
 	else
-		printf("ft_str_append(): \e[0;32mOK\e[0;0m\n");
+		printf("ft_strapp(): \e[0;32mOK\e[0;0m\n");
+	last_ret = ret;
+	ret += test_ft_strnapp();
+	if (last_ret != ret)
+		printf("ft_strnapp(): \e[0;31mKO\e[0;0m\n");
+	else
+		printf("ft_strnapp(): \e[0;32mOK\e[0;0m\n");
 	last_ret = ret;
 	ret += test_ft_strdup();
 	if (last_ret != ret)

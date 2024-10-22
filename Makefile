@@ -62,7 +62,8 @@ TEST_NAME	=	coverage
 
 TEST_FIL	=	main \
 				ft_is/test_ft_isalnum \
-				ft_str/test_ft_str_append \
+				ft_str/test_ft_strapp \
+				ft_str/test_ft_strnapp \
 				ft_str/test_ft_strdup \
 				ft_str/test_ft_strlen
 
