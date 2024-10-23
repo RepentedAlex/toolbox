@@ -12,7 +12,7 @@
 AR			=	ar rcsT
 RM			=	rm -rf
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror -fPIE
 DEBUG		= -g3
 FLAGS		+= $(DEBUG)
 DFLAGS		= -MMD -MP
