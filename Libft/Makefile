@@ -73,6 +73,7 @@ SRC_FILES =		ft_is/ft_isalnum \
 				ft_str/ft_strcmp \
 				ft_str/ft_strcpy \
 				ft_str/ft_strdup \
+				ft_str/ft_strndup \
 				ft_str/ft_striteri \
 				ft_str/ft_strjoin \
 				ft_str/ft_strlcat \
