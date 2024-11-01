@@ -82,7 +82,7 @@ all: $(NAME)
 #Merge all static libraries into one
 $(NAME): $(LIBFT_A)
 	echo "Combinig libraries into $(NAME)..."
-	$(AR) $(NAME) $(LIBFT_A)
+	mv $(LIBFT_A) ./
 	echo "$(NAME) Created"
 
 $(LIBFT_A):
@@ -98,6 +98,7 @@ fclean: clean
 	echo "Removing all libraries..."
 	$(MAKE) fclean -C $(LIBFT)
 	$(RM) $(NAME)
+	$(RM) libft.a
 	$(RM) $(TEST_NAME)
 
 re: fclean all
