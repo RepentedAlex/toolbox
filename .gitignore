@@ -4,5 +4,6 @@ libtoolbox.a
 build
 Libft/.cache_exists
 Libft/libft.a
+libft.a
 Libft/build
 .idea
