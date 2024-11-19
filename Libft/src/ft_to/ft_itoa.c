@@ -106,8 +106,8 @@ char	*ft_itoa(int n)
 	long	n_long;
 
 	n_long = n;
+	n_len = 0;
 	n_len = ft_get_nb_len(n_long);
-	ascii = NULL;
 	ascii = (char *)malloc(sizeof(char) * (n_len + 1));
 	if (!ascii)
 		return (NULL);
