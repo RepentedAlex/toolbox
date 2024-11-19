@@ -54,33 +54,42 @@ static int	ft_get_nb_len(long int n)
  *
  * @return The transcribed number as an unsigned character array.
  */
-static unsigned char	*ft_transcribe_nb(char *dst, long int n, int len)
+static void	ft_transcribe_nb(char *dst, long int n, int len)
 {
-	if (len <= 0)
-		return (NULL);
-	dst[len] = 0;
+	dst[len] = '\0';
 	len--;
-	while (len >= 0 && dst[len] != '-')
+	if (n == 0)
 	{
-		if (n == 10)
-		{
-			dst[len] = '0';
-			dst[len - 1] = '1';
-			return ((unsigned char *)dst);
-		}
-		if (n >= 0 && n <= 9)
-		{
-			dst[len] = (n + '0');
-			return ((unsigned char *)dst);
-		}
-		if (n > 10)
-		{
-			dst[len] = (n % 10) + '0';
-			n /= 10;
-		}
+		dst[len] = '\0';
+		return ;
+	}
+	while (n > 0 && len >= 0)
+	{
+		dst[len] = (n % 10) + '0';
+		n /= 10;
 		len--;
 	}
-	return ((unsigned char *)dst);
+//	while (len >= 0 && dst[len] != '-')
+//	{
+//		if (n == 10)
+//		{
+//			dst[len] = '0';
+//			dst[len - 1] = '1';
+//			return ((unsigned char *)dst);
+//		}
+//		if (n >= 0 && n <= 9)
+//		{
+//			dst[len] = (n + '0');
+//			return ((unsigned char *)dst);
+//		}
+//		if (n > 10)
+//		{
+//			dst[len] = (n % 10) + '0';
+//			n /= 10;
+//		}
+//		len--;
+//	}
+//	return ((unsigned char *)dst);
 }
 
 /**
@@ -94,17 +103,24 @@ char	*ft_itoa(int n)
 {
 	char	*ascii;
 	int		n_len;
+	long	n_long;
 
-	n_len = ft_get_nb_len((long int)n);
-	ascii = ft_calloc(n_len + 1, sizeof(char));
+	n_long = n;
+	n_len = ft_get_nb_len(n_long);
+	ascii = (char *)malloc(sizeof(char) * (n_len + 1));
 	if (!ascii)
 		return (NULL);
-	if ((long int)n < 0)
+	if (n_long < 0)
 	{
 		ascii[0] = '-';
-		ft_transcribe_nb(ascii, (long int)n * -1, n_len);
+		n_long = -n_long;
 	}
-	else
-		ft_transcribe_nb(ascii, (long int)n, n_len);
+	else if (n_long == 0)
+	{
+		ascii[0] = '0';
+		ascii[1] = '\0';
+		return (ascii);
+	}
+	ft_transcribe_nb(ascii, n_long, n_len);
 	return (ascii);
 }
