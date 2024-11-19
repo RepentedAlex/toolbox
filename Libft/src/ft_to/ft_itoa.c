@@ -56,6 +56,8 @@ static int	ft_get_nb_len(long int n)
  */
 static unsigned char	*ft_transcribe_nb(char *dst, long int n, int len)
 {
+	if (len <= 0)
+		return (NULL);
 	dst[len] = 0;
 	len--;
 	while (len >= 0 && dst[len] != '-')
